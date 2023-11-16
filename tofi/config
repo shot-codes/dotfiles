@@ -1,0 +1,12 @@
+anchor = top
+horizontal = true
+font-size = 11
+font = /usr/share/fonts/TTF/IosevkaNerdFont-Regular.ttf
+prompt-text = ""
+outline-width = 0
+border-width = 0
+result-spacing = 25
+width = 100%
+height = 26
+padding-top = 4
+padding-bottom = 0

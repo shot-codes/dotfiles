@@ -1,0 +1,15 @@
+Google/
+Microsoft/
+Microsoft Teams - Preview/
+teams/
+configstore/
+Signal/
+dconf/
+autostart/
+gtk-3.0/
+procps/
+pulse/
+systemd/
+tuxedo-control-center/
+mimeapps.list
+spaceship.zsh.zwc
