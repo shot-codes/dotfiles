@@ -7,6 +7,10 @@
 return {
   {
     "shot-codes/alabaster.nvim",
+    init = function()
+      vim.g.alabaster_dim_comments = true
+      vim.g.background = light
+    end,
   },
 
   -- Configure LazyVim to load gruvbox
@@ -234,8 +238,8 @@ return {
     },
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
+      local cmp = require("cmp")
       table.insert(opts.sources, { name = "emoji" })
-
       local has_words_before = function()
         unpack = unpack or table.unpack
         local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -243,7 +247,6 @@ return {
       end
 
       local luasnip = require("luasnip")
-      local cmp = require("cmp")
 
       opts.completion = { completeopt = "menu,menuone,noinsert,noselect" }
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
