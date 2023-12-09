@@ -39,6 +39,19 @@ return {
     },
   },
 
+  {
+    "echasnovski/mini.indentscope",
+    -- enabled = false,
+    opts = {
+      symbol = "▏",
+    },
+  },
+
+  {
+    "akinsho/bufferline.nvim",
+    enabled = false,
+  },
+
   -- change trouble config
   {
     "folke/trouble.nvim",
@@ -164,6 +177,7 @@ return {
         "vim",
         "yaml",
         "svelte",
+        "htmldjango",
       },
     },
   },
@@ -218,6 +232,8 @@ return {
         "shfmt",
         "flake8",
         "svelte-language-server",
+        "html-lsp",
+        "htmx-lsp",
       },
     },
   },
