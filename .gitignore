@@ -18,3 +18,5 @@ turborepo/
 mimeapps.list
 spaceship.zsh.zwc
 go/
+kitty/kitty.conf.bak
+lazygit/state.yml
