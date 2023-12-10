@@ -1,0 +1,21 @@
+-- local inlay_hints_enabled = true
+--
+-- return {
+--   "simrat39/rust-tools",
+--   keys = {
+--     {
+--       "<leader>uh",
+--       function()
+--         local rust_tools = require("rust-tools")
+--         if inlay_hints_enabled then
+--           rust_tools.inlay_hints.disable()
+--           inlay_hints_enabled = false
+--         else
+--           rust_tools.inlay_hints.enable()
+--           inlay_hints_enabled = true
+--         end
+--       end,
+--       desc = "Toggle inlay hints",
+--     },
+--   },
+-- }

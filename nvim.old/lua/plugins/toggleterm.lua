@@ -4,6 +4,7 @@ return {
     config = true,
     cmd = "ToggleTerm",
     keys = {
+      { "<F5>", "<cmd>TermExec cmd='lazygit'<cr>", desc = "Toggle lazgit" },
       { "<F4>", "<cmd>ToggleTerm<cr>", desc = "Toggle floating terminal" },
     },
     opts = {
