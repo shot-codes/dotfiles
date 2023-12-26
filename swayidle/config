@@ -1,3 +1,4 @@
 timeout 300 'swaylock -f'
 timeout 420 'systemctl suspend'
 timeout 120 'if pgrep swaylock; then systemctl suspend; fi'
+before-sleep 'swaylock -f'
