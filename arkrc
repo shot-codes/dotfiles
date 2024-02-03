@@ -1,0 +1,10 @@
+[General]
+LockSidebar=true
+ShowSidebar=true
+ShowWelcomeScreenOnStartup=true
+
+[MainWindow]
+2560x1600 screen: Window-Maximized=true
+State=AAAA/wAAAAD9AAAAAQAAAAEAAACBAAAB4PwCAAAAAfsAAAAWAGEAcgBrAF8AcwBpAGQAZQBiAGEAcgAAAAAAAAAB4AAAAE0A///+AAAE+gAAAvsAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+StatusBar=Disabled
+ToolBarsMovable=Disabled

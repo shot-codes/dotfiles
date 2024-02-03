@@ -1,12 +1,12 @@
 {
     "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 8, // Waybar height (to be removed for auto height)
     "width": "auto", // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
-    "modules-right": ["tray", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "custom/swaylock", "battery", "clock"],
+    "modules-right": ["tray", "pulseaudio", "network", "cpu", "temperature", "memory", "backlight",  "battery", "custom/swaylock", "clock", "idle_inhibitor"],
     // Modules configuration
      "hyprland/workspaces": {
          "disable-scroll": true,
@@ -26,7 +26,7 @@
           },
      },
      "custom/swaylock": {
-        "format": "",
+        "format": "LOCK",
         "on-click": "swaylock -f",
         "tooltip": false,
       },
@@ -47,25 +47,24 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}%  ",
+        "format": "CPU {usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": "{}%  "
+        "format": "MEM {}%"
     },
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""],
+        "format-critical": "{temperatureC}°C 🔥",
+        "format": "{temperatureC}°C",
         "tooltip": "false"
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format": "BL {percent}%",
+        //"format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
         "states": {
@@ -73,41 +72,31 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% 󰂄",
-        "format-plugged": "{capacity}%  ",
-        "format-alt": "{time} {icon} ",
+        "format": "BAT {capacity}%",
+        "format-charging": "BAT-CH {capacity}%",
+        "format-plugged": "BAT_PL {capacity}% ",
+        "format-alt": "{time}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%)  ",
-        "format-ethernet": "{ipaddr}/{cidr}  ",
+        "format-wifi": "NET {essid} ({signalStrength}%)",
+        "format-ethernet": "NET {ipaddr}/{cidr}  ",
         "tooltip-format": "{ifname} via {gwaddr}  ",
-        "format-linked": "{ifname} (No IP)  ",
-        "format-disconnected": "Disconnected ⚠ ",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-linked": "NET {ifname} (No IP)  ",
+        "format-disconnected": "Disconnected",
+        "format-alt": "NET {ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         // "format": "{volume}% {icon} {format_source}",
-        "format": "{volume}% {icon} ",
-        "format-bluetooth": "{volume}% {icon}  ",
-        "format-bluetooth-muted": " {icon}  ",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}%  ",
-        "format-source-muted": " ",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
+        "format": "VOL {volume}%",
+        "format-bluetooth": "VOL-BT {volume}%",
+        "format-bluetooth-muted": "VOL-BL-MUT",
+        "format-muted": "VOL-MUT{format_source}",
+        "format-source": "MIC {volume}%",
+        "format-source-muted": "MIC-MUT",
         "on-click": "pavucontrol"
     },
     "custom/media": {

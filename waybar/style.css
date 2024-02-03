@@ -6,8 +6,8 @@
 }
 
 window#waybar {
-    background-color: rgba(255, 255, 255, 0.0);
-    color: #ffffff;
+    background-color: rgba(0, 0, 0, 1.0);
+    color: #cccccc;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -37,7 +37,8 @@ button {
 }
 
 #workspaces button {
-    color: #ffffff;
+  color: #cccccc;
+  padding: 4px 4px;
 }
 
 #workspaces button:hover {
@@ -63,47 +64,60 @@ button {
 #pulseaudio,
 #tray,
 #mode,
-#idle_inhibitor,
+#custom-swaylock,
+#idle_inhibitor {
+	border-left-style: solid;
+	border-left-width: 2px;
+	border-left-color: #303030;
+	margin: 0px 0px;
+	padding-left: 10px;
+	padding-right:5px;
+}
+
+#pulseaudio {
+		border-left-style: none;
+
+}
+#temperature {
+	border-left-style: none;
+	margin-left: -12px;
+}
 
 #window {
-    margin-top: 0px;
-  padding: 0px 5px;
+  margin-top: 0px;
+  padding: 0px 0px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
-    margin-left: 8px;
+    /* margin-left: 8px; */
 }
 
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child {
-    padding-right: 0px;
-    margin-right: 5px;
+    /* padding-right: 0px; */
+    /* margin-right: 5px; */
 }
 
 #clock {
-    margin-right: 8px;
 }
 
+#cpu {
+}
+
+
 #custom-swaylock {
-  padding-right: 6px;
-  padding-left: 5px;
 }
 
 #battery {
-  padding-left: 5px;
-  padding-right: 9px;
 }
 
 #battery.charging, #battery.plugged {
-  padding-left: 5px;
-  padding-right: 7px;
 }
 
 @keyframes blink {
   to {
     color: #000000;
-    padding: 0px 5px;
     }
 }
 
@@ -114,27 +128,22 @@ button {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    padding: 0px 5px;
 }
 
 label:focus {
 }
 
 #network.disconnected {
-  padding: 0px 5px;
 }
 
 #pulseaudio.muted {
-  padding: 0px 5px;
 }
 
 #temperature.critical {
-  padding: 0px 5px;
 }
 
 #tray > .passive {
   -gtk-icon-effect: dim;
-  padding: 0px 5px;
 }
 
 #tray > .needs-attention {
@@ -145,11 +154,7 @@ label:focus {
 }
 
 #backlight {
-  padding-left: 5px;
-  padding-right: 7px;
 }
 
 #temperature {
-  padding-left: 5px;
-  padding-right: 7px;
 }

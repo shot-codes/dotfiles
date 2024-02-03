@@ -1,0 +1,50 @@
+/* Show title of unread tabs with red and italic font */
+/*
+:root.sidebar tab-item.unread .label-content {
+  color: red !important;
+  font-style: italic !important;
+}
+*/
+
+/* Add private browsing indicator per tab */
+/*
+:root.sidebar tab-item.private-browsing tab-label:before {
+  content: "🕶";
+}
+*/
+
+tab-item {
+  --tab-size: 25px !important;
+    font-family: Iosevka;
+}
+tab-item  tab-item-substance {
+  height: var(--tab-size);
+}
+
+.tab .favicon {
+  margin-right: 5px; /* Adjust the margin value according to your preference */
+}
+
+@media (prefers-color-scheme: light) {
+  /* Customize hover tab color for light mode */
+  .tab:hover {
+    background-color: #dedede; 
+  }
+  tab-item.active {
+  font-weight: bold;
+    background-color: #dddddd;
+}
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Customize hover tab color for dark mode */
+  .tab:hover {
+    background-color: #252525; /* Change this color to your preferred dark mode hover color */
+  }
+    tab-item.active  {
+  font-weight: bold;
+
+    background-color: #303030;
+}
+}
+

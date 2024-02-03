@@ -17,7 +17,7 @@ screenshots
 fade-in=0.3
 
 # Effect for background
-#effect-blur=20x6
+# effect-blur=20x6
 effect-greyscale
 effect-pixelate=6
 

@@ -1,6 +1,8 @@
 include current-theme.conf
 include font.conf
 
+allow_remote_control yes
+
 # vim:fileencoding=utf-8:foldmethod=marker
 
 #: Fonts {{{

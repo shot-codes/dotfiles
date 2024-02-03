@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Microservices
+Comment=launch associate windows for microservices course
+Exec=/home/shot/.config/tofi/workspace_presets/microservices
+Type=Application
+Categories=Utility;Development;
+Terminal=false
+

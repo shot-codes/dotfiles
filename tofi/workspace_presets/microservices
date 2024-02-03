@@ -1,0 +1,10 @@
+#!/bin/bash
+folder_names=("rest-service" "e2e-test" "common")
+nvim_path=$(which nvim)
+
+for folder in "${folder_names[@]}"; do
+	kitty --title=${folder} --directory="$HOME/Documents/dtu/microservices/exam/micropay/${folder}" &
+done
+for folder in "${folder_names[@]}"; do
+
+done
